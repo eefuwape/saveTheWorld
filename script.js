@@ -29,9 +29,10 @@ class Ship {
     attack = (alien) => {
         // If it is human's turn
         if (this.myturn) {
+
             // enable attack button
 
-            letDGameBegin.classList.add("enabled")
+            humanAttack.classList.add("enabled")
 
             // listen for attack alien button click
 
@@ -43,7 +44,7 @@ class Ship {
         } else { // if it's alien's turn
             // disppear human attack button and make alien attack button appear
 
-            letDGameBegin.classList.replace("disabled")
+            humanAttack.classList.replace("disabled")
 
             // turn alien turn 
 
@@ -88,7 +89,7 @@ const startYourEngines = () => {
     humanAttack.style.visibility = "visible"
 }
 
-// Determin Successful Hits
+// Determine Successful Hits
 
 const successfulHit = (enemy) => {
     let hit
@@ -97,29 +98,29 @@ const successfulHit = (enemy) => {
     } else {
         hit =  "Target Missed!"
     }
-    return hit
+    displayAction(hit) 
 }
 
 const playerHitSuccess = (attacker, victim) => {
+
     // subtract human hit point from alien hull
 
     victim.hull -= attacker.firepower
 
-    // display succssful hit in bigScreen
-
-
     // update hull of alien ship
+
+    updateShipData(enemy)
+
     // call check hull of alien ship function
+
+    checkShipAlive(enemy)
 }
 
-const playerHitFailure = () => {
-    // Display you Missed Alert in Big Screen Container
-    // Disppear Human Button
-    // Appear Alien Button
-}
 
-const checkShipAlive = () => {
+const checkShipAlive = (attackedShip) => {
+
     // if ship hull <= 0
+
     if (this.hull <= 0) {
 
         // Display Alien ship destroyed
@@ -137,6 +138,9 @@ const checkShipAlive = () => {
     }
     else {
         // disappear human attack button
+
+        letDGameBegin.classList.replace("disabled")
+
         // appear alien attack button
     }
 }
