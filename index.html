@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SPACE BATTLE</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1 class="title">SPACE BATTLE</h1>
+        </div>
+        <div class="battleField">
+            <div class="human">
+                <div class="name">
+                    <h2>USS ASSEMBLY</h2>
+                </div>
+                <div class="uss"><img src="images/ussAssembly.png" alt="Human Spaceship Image" class="humanShip"></div>
+                <div class="attackSection">
+                    <button type="button" id="humanAttacks">Attack Alien!</button>
+                </div>
+                <div class="playerStats">
+                    <ul class="humanStats">
+                        <li>Hull: <span id="ussHull"></span></li>
+                        <li>Firepower: <span id="ussFP"></span></li>
+                        <li>Accuracy: <span id="ussAccuracy"></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bigScreen">
+                <div class="startGame">
+                    <button type="button" id="begin" autofocus>BEGIN</button>
+                </div>
+                <div class="roundResult">
+                    <h2>Round <span id="currentRound"></span></h2>
+                </div>
+                <div class="attackNotofications">
+                    <ul id="attackResults"></ul>
+                </div>
+                <div class="prompt" id="fightOrFlight">
+                    <p>Would you like to continue or retreat?<br></p>
+                    <button type="button" id="retreat">RETREAT</button>
+                    <button type="button" id="continue">CONTINUE</button>
+                </div>                
+            </div>
+            <div class="alien">
+                <div class="name">
+                    <h2>ALIEN SHIP</h2>
+                </div>
+                <div class="image">
+                    <img src="images/alien.png" alt="Alien Spaceship Image" class="alienShip">
+                </div>
+                <div class="attackSection">
+                    <button type="button" id="alienAttacks">Attack USS!</button>
+                </div>
+                <div class="playerStats">
+                    <ul class="alienStats">
+                        <li>Hull: </li>
+                        <li>Firepower: </li>
+                        <li>Accuracy: </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <script src="script.js" async defer></script>
+    </body>
+</html>

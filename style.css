@@ -1,0 +1,122 @@
+body {
+    background-color: black;
+    /* background-image: ; */
+}
+
+.header {
+    display: flex;
+    height: 10%;
+    width: 100%;
+    border: 2px purple solid;
+    justify-content: center;
+    align-self: center;
+    color: coral;
+    font-size: 40px;
+}
+.battleField {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    border: 2px solid gold;
+    height: 90%;
+    color: chartreuse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.human {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 25%;
+    height: 60%;
+    border: 1px pink solid;
+    justify-content: center;
+    align-items: center;
+}
+
+.name, .playerStats {
+    color: aliceblue;
+    font-size: xx-large;
+}
+
+.bigScreen {
+    display: flex;
+    flex-direction: column;
+    border: 1px greenyellow solid;
+    height: 60%;
+    width: 50%;
+
+}
+
+.alien {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 60%;
+    border: 1px orangered solid;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 300px;
+    height: auto;
+}
+
+button {
+    background-color: green;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.startGame {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#begin {
+    font-size: 250px;
+    visibility: visible;
+}
+
+.roundResult {
+    display: flex;
+    justify-content: center;
+    visibility: collapse;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.attackResult {
+    display: flex;
+    justify-content: center;
+    visibility: collapse;
+    font-size: large;
+    font-weight: bold;
+}
+
+#fightOrFlight {
+    display: flex;
+    justify-content: center;
+    visibility: collapse;
+    font-size: large;
+    font-weight: bold;
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    visibility: hidden;
+}
+
+.enabled {
+    opacity: 1;
+    cursor: pointer;
+    visibility: visible;
+}
